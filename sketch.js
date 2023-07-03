@@ -28,7 +28,7 @@ function setup() {
    playerBase = Bodies.rectangle(200,350,180,150,options);
    World.add(world,playerBase);
   //criar corpo do jogador
-  player = Bodies.rectangle(150, playerBase.position.y - 160,50,180,options);
+  player = Bodies.rectangle(250, playerBase.position.y - 160,50,180,options);
   World.add(world,player);
 
 }
@@ -42,11 +42,10 @@ function draw() {
   //exibir a imagem da base do jogador usando a função image()
   image(playerimage,player.position.x,player.position.y,50,180)
 
-  Engine.update(engine);
-
   // Title
   fill("#FFFF");
   textAlign("center");
   textSize(40);
   text("ARQUEIRO ÉPICO", width / 2, 100);
 }
+ Engine.update(engine);
